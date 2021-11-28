@@ -65,13 +65,15 @@ changelog:
   #     order: 1
   #   - title: Others
   #     order: 999
-
   filters:
-    # Commit messages matching the regexp listed here will be removed from
-    # the changelog
-    # Default is empty
     exclude:
       - '^docs'
+      - '^test'
+      - '^chore'
+      - Merge pull request
+      - Merge remote-tracking branch
+      - Merge branch
+      - go mod tidy
       - '^style'
 
 # .goreleaser.yml
