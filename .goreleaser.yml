@@ -1,4 +1,4 @@
-project_name: gotoggl
+project_name: goexample
 env:
   - GO111MODULE=on
 before:
@@ -6,7 +6,7 @@ before:
     - go mod tidy
 builds:
   - main: main.go
-    binary: gotoggl
+    binary: goexample
     goos:
       - linux
       - darwin
@@ -15,9 +15,9 @@ builds:
       - amd64
     ldflags:
       - -s -w
-      - -X github.com/akira393/gotoggl/cmd.Version={{.Version}}
-      - -X github.com/akira393/gotoggl/cmd.Revision={{.ShortCommit}}
-      - -X github.com/akira393/gotoggl/cmd.BuildTag={{.Tag}}
+      - -X main.Version={{.Version}}
+      - -X main.Revision={{.ShortCommit}}
+      - -X main.BuildTag={{.Tag}}
     env:
       - CGO_ENABLED=0
 archives:
