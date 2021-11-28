@@ -11,3 +11,13 @@ func main() {
 func sum(num1 int, num2 int) int {
 	return num1 + num2
 }
+
+var (
+	Version  string
+	Revison  string
+	BuildTag string
+)
+
+func PrintMeta() {
+	fmt.Println(Version, Revison, BuildTag)
+}
